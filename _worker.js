@@ -684,8 +684,7 @@ function getConfigHtml(userID, host, remark, v2ray, clash) {
 	// HTML Head with CSS and FontAwesome library
 	const htmlHead = `
     <head>
-      <title>am-cf-tunnel(AM科技)</title>
-      <meta name='description' content='This is a project to generate free vmess nodes. For more information, please subscribe youtube(AM科技) https://youtube.com/@AM_CLUB and follow GitHub https://github.com/amclubs ' />
+      <title>Tunnel</title>
       <style>
         body {
           font-family: Arial, sans-serif;
@@ -726,6 +725,10 @@ function getConfigHtml(userID, host, remark, v2ray, clash) {
         }
       </style>
     </head>
+  `;
+
+	// Prepare header string with left alignment
+	const header = `
   `;
 
 	// Prepare the output string
