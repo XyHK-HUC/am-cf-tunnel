@@ -41,6 +41,11 @@ let ipUrlCsv = [
 	// 'https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.csv'
 ];
 // Preferred addresses with optional TLS subscription
+let ipLocal = [
+	'visa.cn:443',
+	'icook.hk',
+	'time.is:443'
+];
 let noTLS = 'false';
 let sl = 5;
 
@@ -679,7 +684,8 @@ function getConfigHtml(userID, host, remark, v2ray, clash) {
 	// HTML Head with CSS and FontAwesome library
 	const htmlHead = `
     <head>
-      <title>tunnel</title>
+      <title>am-cf-tunnel(AM科技)</title>
+      <meta name='description' content='This is a project to generate free vmess nodes. For more information, please subscribe youtube(AM科技) https://youtube.com/@AM_CLUB and follow GitHub https://github.com/amclubs ' />
       <style>
         body {
           font-family: Arial, sans-serif;
@@ -723,6 +729,18 @@ function getConfigHtml(userID, host, remark, v2ray, clash) {
   `;
 
 	// Prepare header string with left alignment
+	const header = `
+		<p align="left" style="padding-left: 20px; margin-top: 20px;">
+		Telegram交流群 技术大佬~在线交流</br>
+		<a href="t.me/AM_CLUBS" target="_blank">t.me/AM_CLUBS</a>
+		</br></br>
+		GitHub项目地址 点击Star!Star!Star!</br>
+		<a href="https://github.com/amclubs/am-cf-tunnel" target="_blank">https://github.com/amclubs/am-cf-tunnel</a>
+		</br></br>
+		YouTube频道,订阅频道,更多技术分享</br>
+		<a href="https://youtube.com/@AM_CLUB" target="_blank">https://youtube.com/@AM_CLUB</a>
+		</p>
+  `;
 
 	// Prepare the output string
 	const httpAddr = `https://${host}/${userID}`;
